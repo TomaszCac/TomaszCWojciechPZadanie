@@ -4,9 +4,7 @@ import java.util.*;
 class Main {
 
     public static void main(String[] args) {
-        //marcin
-    //Krzysiek
-        //marcel
+
     }
 
 }
