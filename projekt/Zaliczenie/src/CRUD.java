@@ -29,13 +29,13 @@ public class CRUD {
         User[] users = null;
 
         try {
-            File file = new File("projekt/Zaliczenie/users.txt");
+            File file = new File("users.txt");
 
             BufferedReader reader =new BufferedReader(new FileReader(file));
             String line;
             while((line = reader.readLine()) != null)
             {
-                int[] books = new int[5];
+                Integer[] books = new Integer[5];
                 String[] tab = line.split(",");
                 for(int i = 2; i < tab.length; i++)
                 {

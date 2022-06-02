@@ -8,7 +8,7 @@ public class Book {
     boolean available;
     int borrowerId;
     Date dateOfReturn;
-
+    @Override
     public String toString() {
         return "id ksiazki: " + bookId + "\n" + "autor: " + author + "\n" +
                 "tytul: " + title + "\n" +

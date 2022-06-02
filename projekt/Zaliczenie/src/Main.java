@@ -5,11 +5,9 @@ class Main {
 
     public static void main(String[] args) {
         CRUD crud = new CRUD();
-        for (User d: crud.Read()
+        for (User user: crud.Read()
              ) {
-            System.out.println(d.id);
-            System.out.println(d.name);
-            System.out.println(d.books.length);
+            System.out.println(user);
         }
     }
 
