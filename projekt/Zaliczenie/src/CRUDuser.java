@@ -12,14 +12,17 @@ public class CRUDuser {
             writer = new PrintWriter("users.txt");
             for (User user : users
             ) {
-                writer.print(user.id + "," + user.name + "," + user.city + "," + user.street + "," + user.houseNumber + ",");
-                for (var book : user.books
-                ) {
-                    if (!Objects.isNull(book)) {
-                        writer.print(book + ",");
+                if(!Objects.isNull(user))
+                {
+                    writer.print(user.id + "," + user.name + "," + user.city + "," + user.street + "," + user.houseNumber + ",");
+                    for (var book : user.books
+                    ) {
+                        if (!Objects.isNull(book)) {
+                            writer.print(book + ",");
+                        }
                     }
+                    writer.println();
                 }
-                writer.println();
             }
 
         } catch (Exception ex) {
@@ -62,23 +65,27 @@ public class CRUDuser {
 
 
     }
+    User Find(int id)
+    {
+        for (User user: Read()
+             ) {
+            if(user.id == id)
+            {
+                return user;
+            }
+        }
+        return null;
+    }
 
     void Delete(int id) {
-        ArrayList<User> users = new ArrayList<>();
-        for (User user : Read()
-        ) {
-            if (user.id != id) {
-                users.add(user);
+        User[] users = Read();
+        for (int i = 0; i < users.length ; i++) {
+            if(users[i].id==id) {
+                users[i] = null;
+                i = users.length;
             }
-
-
         }
-        User[] userdata = new User[users.size()];
-        for (int x = 0; x < users.size(); x++) {
-            userdata[x] = users.get(x);
-        }
-        Create(userdata);
-
+        Create(users);
 
     }
 

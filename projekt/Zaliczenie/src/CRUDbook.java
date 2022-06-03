@@ -26,6 +26,17 @@ public class CRUDbook {
         }
 
     }
+    Book Find(int id) {
+
+        for (var book: Read()
+             ) {
+            if(book.id == id)
+            {
+                return book;
+            }
+        }
+        return null;
+    }
 
     Book[] Read() {
         ArrayList<Book> test = new ArrayList<>();
