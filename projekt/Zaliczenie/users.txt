@@ -1,2 +1,3 @@
 1,marcinek,marcinia,marinow,1,0,1,
-3,domson,domsonia,doms,3,0,1,
+2,daniel,danielow,denil,2,0,1,
+3,bartek,bartkowo,bartoszs,4,0,1,
