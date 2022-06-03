@@ -6,16 +6,22 @@ import java.io.BufferedReader;
 
 
 public class CRUD {
-    void Create(User user) {
+    void Create(User[] users) {
         PrintWriter writer = null;
         try {
             writer = new PrintWriter("users.txt");
-            writer.print(user.id + "," + user.name + "," + user.city + "," + user.street + "," + user.houseNumber + ",");
-            for (var book: user.books
+            for (User user: users
                  ) {
-                writer.print(book + ",");
+                writer.print(user.id + "," + user.name + "," + user.city + "," + user.street + "," + user.houseNumber + ",");
+                for (var book: user.books
+                ) {
+                    if(!Objects.isNull(book)) {
+                        writer.print(book + ",");
+                    }
+                }
+                writer.println();
             }
-            System.out.println();
+
         } catch (Exception ex) {
             System.out.println(ex);
         }
@@ -46,11 +52,11 @@ public class CRUD {
                 }
                 test.add(new User(Integer.parseInt(tab[0]),tab[1],tab[2],tab[3],Integer.parseInt(tab[4]),books));
             }
-                 users = new User[test.size()];
-                for(int i = 0; i < users.length; i++)
-                {
-                    users[i] = test.get(i);
-                }
+            users = new User[test.size()];
+            for (int x = 0; x < test.size(); x++)
+            {
+                users[x] = test.get(x);
+            }
 
 
         }
@@ -59,6 +65,26 @@ public class CRUD {
         }
         return users;
 
+
+
+    }
+    void Delete(int id) {
+        ArrayList<User> users = new ArrayList<>();
+        for (User user: Read()
+             ) {
+            if(user.id != id)
+            {
+                users.add(user);
+            }
+
+
+        }
+        User[] userdata = new User[users.size()];
+        for(int x = 0; x < users.size(); x++)
+        {
+            userdata[x] = users.get(x);
+        }
+        Create(userdata);
 
 
     }

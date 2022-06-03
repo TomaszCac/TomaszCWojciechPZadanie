@@ -1,1 +1,2 @@
-1,marcin,Marcinia,Marcinowo,1,0,1,
+1,marcinek,marcinia,marinow,1,0,1,
+3,domson,domsonia,doms,3,0,1,
