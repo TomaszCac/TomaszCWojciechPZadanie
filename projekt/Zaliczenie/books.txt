@@ -1,5 +1,5 @@
-1,marcionowo,marcin,false,3,21/06/2022
-2,marcinia,marcin,false,4,21/06/2022
-3,marcin,marcin,false,3,21/06/2022
-4,marcin,andrzejczak,true,0,01/01/1900
-5,olek,olek,true,0,07/07/2021
+1,Empuzjon,Olga Tokarczuk,false,1,21/06/2022
+2,Royal,Sylwia Zandler,false,2,10/07/2022
+3,Harry Potter i komnata tajemnic,J.K. Rowling,false,1,21/06/2022
+4,Harry Potter i kamien filozoficzny,J.K. Rowling,true,0,01/01/1900
+5,Harry Potter i wiezien azkabanu,J.K. Rowling,true,0,01/01/1900

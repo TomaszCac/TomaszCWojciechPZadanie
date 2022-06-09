@@ -1,3 +1,3 @@
-1,admin,admin,admin,5,
-3,maciek,slupsk,marcinowa,7,1,3,
-4,maciek2,maciek,maciek,5,2,
+0,admin,admin,admin,0,
+1,maciek,slupsk,koszalinska,7,1,3,
+2,marcin,slupsk,3-go maja,5,2,
